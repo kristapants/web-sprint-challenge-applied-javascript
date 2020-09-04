@@ -32,6 +32,7 @@ axios.get('https://lambda-times-api.herokuapp.com/articles')
         })
     })
     .catch(err => {
+        articleMaker(errorData, 'all')
         console.log(err)
     })
 
@@ -74,3 +75,10 @@ const articleMaker = ( {authorName, authorPhoto, headline}, topicClass) => {
     return article
 }
 
+const errorData = 
+{
+    "authorName": "Console log for more",
+    "authorPhoto": "https://www.computerhope.com/jargon/e/error.gif",
+    "headline": "Oops, this shouldn't happen. Sorry, check back later.",
+    "id": "nada"
+}
