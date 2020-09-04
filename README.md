@@ -78,7 +78,7 @@ After finishing your required elements, you can push your work further. These go
 
 - [X] Use the tabs at the top of the page to filter articles by topic.
 - [ ] Following the instructions in the `components/Carousel.js file`, create the Carousel component.
-- [ ] Render an error message on the page for the user, if the network request to fetch articles fails.
+- [x] Render an error message on the page for the user, if the network request to fetch articles fails.
 
 ## Submission format
 
