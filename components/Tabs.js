@@ -11,10 +11,10 @@
 // NOTE: you do _not_ need to install axios as it's included in the HTML via script element
 import axios from 'axios'
 
-axios.get('https://lambda-times-api.herokuapp.com/topics')
+axios.get('https://lambda-times-api.herokuapp.com/articles')
     .then(apiData => {
-        apiData.data.topics.forEach(tabTopic => {
-            tabMaker(tabTopic)
+        Object.keys(apiData.data.articles).forEach(articleTopic => {
+            tabMaker(articleTopic)
         });
     })
     .catch(err => {
@@ -29,7 +29,27 @@ const tabMaker = (topics) => {
 
     tabBox.appendChild(tab)
     
-    tab.classList.add('tab')
+    tab.classList.add('tab', `button-${topics}`)
 
     tab.textContent = topics
+
+
+    tab.addEventListener('click', () => {
+        const articlesWithTopic = document.querySelectorAll(`.topic-${topics}`)
+        const articlesAll = document.querySelectorAll('.card')
+        if(tab.classList.contains('button-all')) {
+            articlesAll.forEach(element => {
+                element.classList.remove('inactive')
+            })
+        } else {
+            articlesAll.forEach(element => {
+                element.classList.add('inactive')
+            })
+            articlesWithTopic.forEach(element => {
+                element.classList.remove('inactive')
+            })
+        }
+    })
 }
+
+tabMaker('all')
