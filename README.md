@@ -27,14 +27,15 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What is the DOM?
-
+document object model
 2. What is an event?
-
+something that happens to a page
 3. What is an event listener?
-
+javascript listening for one of those events. like a click 
 4. Why would we convert a NodeList into an Array?
-
+so we can interate through it
 5. What is a component?
+a modular peice of code that uses both design and function. 
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
